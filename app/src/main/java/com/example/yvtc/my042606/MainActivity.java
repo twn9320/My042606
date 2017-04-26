@@ -17,21 +17,5 @@ public class MainActivity extends AppCompatActivity {
         db.close();
     }
 
-    class MyHelper extends SQLiteOpenHelper{
 
-        public MyHelper(Context context) {
-            super(context, "phone1.sqlite",null,1);
-        }
-
-        @Override
-        public void onCreate(SQLiteDatabase db) {
-            String createSQL="CREATE TABLE \"students\" (\"_id\" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , \"Name\" CHAR, \"Addr\" CHAR, \"Tel\" CHAR)";
-            db.execSQL(createSQL);
-        }
-
-        @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-        }
-    }
 }
